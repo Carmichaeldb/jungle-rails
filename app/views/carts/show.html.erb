@@ -3,7 +3,13 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if enhanced_cart.empty? %>
+  <article class="empty-cart panel">
+    <h3>Your Cart is Empty!</h3>
+    <p>Check out some of our amazing plants and add some to the cart!</p>
+    <%= link_to "Browse Products", root_path %>
+  </article>
+  <% else %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -30,6 +36,7 @@
         </tr>
       </tfoot>
     </table>
+
   </div>
 
   <div class="row">
@@ -48,5 +55,5 @@
       <% end %>
     </div>
   </div>
-
+  <% end %>
 </section>
