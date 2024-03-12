@@ -52,10 +52,6 @@ main section.categories-show {
         button {
           background: white;
           color: rgba(0, 130, 29, 0.7);
-          .sold-out {
-            background: red;
-            color: white
-          }
         }
       }
       img {
@@ -95,9 +91,6 @@ main section.categories-show {
           padding-right: 1em;
           background-color: rgba(0, 130, 29, 0.7);
           color: white;
-          .sold-out {
-            background-color: red;
-          }
         }
       }
     }
