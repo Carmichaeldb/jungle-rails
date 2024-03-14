@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+  get 'sessions/create'
+  get 'sessions/destroy'
   get 'signup', to: 'users#new'
   get 'about', to: 'about#index'
   root to: 'products#index'
