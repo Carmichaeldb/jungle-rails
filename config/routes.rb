@@ -1,8 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'signup', to: 'users#new'
   get 'about', to: 'about#index'
   root to: 'products#index'
 
+  resources :users, only: [:new, :create]
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
 
