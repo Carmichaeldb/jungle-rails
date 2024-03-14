@@ -1,12 +1,53 @@
-<h1>Register your Jungle Account</h1>
+<section class="register-page">
+  <header class="page-header">
+    <h1>Register your Jungle Account</h1>
+  </header>
 
-<%= form_for :user, url: '/users'  do |f| %>
-
-  First Name: <%= f.text_field :first_name %>
-  Last Name: <%= f.text_field :last_name %>
-  Email: <%= f.text_field :email %>
-  Password: <%= f.password_field :password %>
-  Password Confirmation: <%= f.password_field :password_confirmation %>
-  <%= f.submit "Submit" %>
-
-<% end %>
+<div class="container">
+  <div class="d-flex justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card">
+          <div class="card-body">
+          <%= form_for :user, url: '/users', html: {class: "form-horizontal"} do |f| %>
+            <div class="mb-3 row">
+              <%= f.label :first_name, class: "form-label col-md-4 text-md-end" %>
+              <div class="col-md-8">
+                <%= f.text_field :first_name %>
+              </div>
+            </div>
+            <div class="mb-3 row">
+                <%= f.label :last_name, class: "form-label col-md-4 text-md-end" %>
+                <div class="col-md-8">
+                  <%= f.text_field :last_name %>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <%= f.label :email, class: "form-label col-md-4 text-md-end" %>
+                <div class="col-md-8">
+                  <%= f.text_field :email %>
+                </div>
+            </div>
+            <div class="mb-3 row">
+                <%= f.label :password, class: "form-label col-md-4 text-md-end" %>
+                <div class="col-md-8">
+                  <%= f.password_field :password %>
+                </div>
+            </div>
+            <div class="mb-3 row">
+              <%= f.label "Confirm Password", class: "form-label col-md-4 text-md-end" %>
+              <div class="col-md-8">
+                <%= f.password_field :password_confirmation %>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-8 offset-md-2 d-flex justify-content-center">
+            <%= f.submit "Sign Up", class: "btn submit-button" %>
+            </div>
+          </div>
+          <% end %>
+       </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
