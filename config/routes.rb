@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
 
-  get 'sessions/new'
-  get 'sessions/create'
-  get 'sessions/destroy'
+  get 'login', to: 'sessions#new'
   get 'signup', to: 'users#new'
   get 'about', to: 'about#index'
   root to: 'products#index'
 
+  resources :sessions, only: [:new, :create, :destroy]
   resources :users, only: [:new, :create]
   resources :products, only: [:index, :show]
   resources :categories, only: [:show]
