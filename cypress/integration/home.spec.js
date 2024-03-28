@@ -1,4 +1,4 @@
-describe('first test', () => {
+describe('Visit Home Page', () => {
   it("should visit app homepage", () => {
     cy.visit('/')
   })
